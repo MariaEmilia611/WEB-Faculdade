@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Notas</title>
+    <style>
+       
+        table {
+            width:10%; 
+            border-collapse: collapse;
+            font-family: sans-serif;
+        }
+
+        
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid #333; 
+            padding: 8px;
+            text-align: center; 
+        }
+
+    
+        thead {
+            background-color: #f2f2f2;
+        }
+        
+        
+        .aprovado {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .reprovado {
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Tabelas</h1>
+    <hr>
+
+    <table>
+        <tr >Relação das notas</tr>
+        <caption>Relação das notas</caption>
+        
+        
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Nota</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>João Paulo</td>
+                <td>6.8</td>
+                <td class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Roberto Carlos</td>
+                <td>8.4</td>
+                <td class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Ana Maria</td>
+                <td>5.7</td>
+                <td class="reprovado">Reprovada</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
