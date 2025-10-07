@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,35 @@
 
     <title>VIA CEP</title>
 
-    
+
 </head>
 
 <script>
     function getCep() {
         var url = 'https://viacep.com.br/ws/14060240/json/'
-        $.get(url, function(cep) {
+        $.get(url, function (cep) {
 
             console.log(cep)
 
             setParagrafos(cep)
+            setFormulario(cep)
 
 
         });
-        
+
     }
-    
+
     // = dados:Ou pode ser cep também lembrando que a varíavel é outra por isso é possível mudar seu nome
     function setParagrafos(dados) {
         $('#logradouro').text(dados.logradouro)
         $('#bairro').text(dados.bairro)
+
+    }
+
+    function setFormulario(cep) {
+        $('#localidade').val(cep.localidade)
+        $('#Estado').val(cep.estado)
+
 
     }
 </script>
@@ -38,15 +47,39 @@
     <div class="content">
         <h1>Via CEP</h1>
 
+        <h3>Exemplo com parágrafos</h3>
         <p>Logradouro: <span id="logradouro"></span></p>
         <p>Bairro: <span id="bairro"></span></p>
 
-        <button class="btn btn-primary" onclick="getCep();">
-            Buscar CEP
-        </button>
+        <h3>Exemplo com formulário</h3>
+        <form action="">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="none" class="form-label">Localidade</label>
+                    <input type="text" class="form-control" id="localidade">
+
+
+                </div>
+                <div class="col-md-6">
+                    <label for="none" class="form-label">Estado</label>
+                    <input type="text" class="form-control" id="Estado">
+                </div>
+            </div>    
+        </form>
+
+        <div>
+            <button class="btn btn-primary" onclick="getCep();">
+                Buscar CEP
+            </button>
+
+        </div>
+      
+
+
 
     </div>
-    
+
 </body>
 
 </html>
