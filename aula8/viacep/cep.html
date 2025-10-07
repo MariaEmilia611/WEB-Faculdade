@@ -14,10 +14,14 @@
 </head>
 
 <script>
+    $(document).ready(function() {
+       Limpar()
+    })
+    
     function getCep() {
-        var url = 'https://viacep.com.br/ws/14060240/json/'
+        var cepBusca = $('cep'.val())
+        var url = 'https://viacep.com.br/ws/' + cepBusca + '/json'
         $.get(url, function (cep) {
-
             console.log(cep)
 
             setParagrafos(cep)
@@ -40,6 +44,12 @@
         $('#Estado').val(cep.estado)
 
 
+    }
+
+    function Limpar() {
+        $('#localidade').val('')
+        $('#estado').val('')
+        $('#cep').val('')
     }
 </script>
 
@@ -65,16 +75,29 @@
                     <label for="none" class="form-label">Estado</label>
                     <input type="text" class="form-control" id="Estado">
                 </div>
-            </div>    
+            </div>
         </form>
 
-        <div>
-            <button class="btn btn-primary" onclick="getCep();">
-                Buscar CEP
-            </button>
+        <div class="row col-mt-3">
 
+            <div class="col-mt-6">
+
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="CEP">
+                <button class="btn btn-primary mt-3" onclick="getCep();">
+                    Buscar CEP
+                </button>
+
+                <button class="btn btn-secondary btn-block mt-3" onclick="getCep();">
+                    Limpar
+                </button>
+            </div>
         </div>
-      
+
+
+
+    </div>
+
 
 
 
