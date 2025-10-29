@@ -15,12 +15,16 @@ function mostraDados(){
             linha += '<td>' + produtos[i].nome + '</td>'
             linha += '<td>' + produtos[i].valor + '</td>'
             linha += '<td><button onclick="alterar(' + produtos[i].id + ')" class="btn btn-warning btn-sm">Alterar</button></td>'
-            linha += '<td><button onclick="excluir(' + produtos[i].id + ')" class="btn btn-danger btn-sm">Excluir</button></td>'
+            linha += '<td><button onclick="excluir(' + produtos[i].id + ')" class="btn btn-danger btn-sm">Excluir</button></td>'            
             linha += '</tr>'
-
             $('#tb_produtos tbody').append(linha);
+
         }
     });
+}
+
+function adicionar(){
+    alert('ADICIONAR')
 }
 
 function alterar(id){
