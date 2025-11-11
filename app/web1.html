@@ -40,23 +40,23 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Cadastro de Produtos </h5>
+          <h5 class="modal-title" id="exampleModalLabel">Cadastro de Produtos</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="nome" class="form-label">Nome do Produto: </label>
+              <label for="nome" class="form-label">Nome do Produto:</label>
               <input type="text" class="form-control" id="nome" placeholder="Informe o nome do produto">
             </div>
             <div class="mb-3">
-              <label for="valor" class="form-label">Valor do Produto </label>
-              <input type="text" class="form-control" id="valor" placeholder="Informe o valor do produto"> 
+              <label for="valor" class="form-label">Valor do Produto</label>
+              <input type="text" class="form-control" id="valor" placeholder="Informe o valor do produto">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="criarProduto()">Salvar </button>
+          <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -68,14 +68,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="successModalLabel">Registro Incluído </h5>
+          <h5 class="modal-title" id="successModalLabel">Sucesso</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          Registro Incluído com Sucesso.
+        <div class="modal-body" id="msgSucesso">
+          Operação realizada com sucesso.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
