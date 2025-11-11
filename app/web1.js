@@ -4,6 +4,14 @@ $(document).ready(function() {
     mostraDados()
 })
 
+function novoProduto(){
+    $('#nome').val(''); 
+    $('#valor').val('');
+    $('#dlgProdutos').modal('show'); 
+}
+
+
+
 function mostraDados(){
     $.get(url, function(produtos){
         $('#tb_produtos tbody tr').remove();
